@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,700;1,500&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html,
+body {
+  background-color: #fbf6ea;
+  color: #2a1a0d;
+  font-family: "Inter", system-ui, sans-serif;
+  scroll-behavior: smooth;
+}
+
+.section-divider {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 12'><path d='M0 6 Q 25 0 50 6 T 100 6' fill='none' stroke='%23c8a052' stroke-width='1'/></svg>");
+  background-repeat: repeat-x;
+  background-position: center;
+  height: 12px;
+}
+
+.paper-texture {
+  background-image:
+    radial-gradient(rgba(90, 58, 34, 0.04) 1px, transparent 1px),
+    radial-gradient(rgba(90, 58, 34, 0.03) 1px, transparent 1px);
+  background-size: 18px 18px, 32px 32px;
+  background-position: 0 0, 9px 9px;
+}
