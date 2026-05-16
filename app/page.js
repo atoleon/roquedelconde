@@ -135,6 +135,14 @@ export default function Home() {
               </a>
             </li>
             <li>
+              <a
+                href="/experiencia-menu-canario"
+                className="hover:text-gold-400 transition"
+              >
+                Experiencia
+              </a>
+            </li>
+            <li>
               <a href="#galeria" className="hover:text-gold-400 transition">
                 Galería
               </a>
@@ -269,6 +277,45 @@ export default function Home() {
           <p className="mt-12 text-center text-sm italic text-bark-700/70">
             La carta cambia con la temporada según el producto del mercado.
           </p>
+        </div>
+      </section>
+
+      {/* BANNER EXPERIENCIA */}
+      <section className="bg-bark-800 py-16 text-parchment-100 sm:py-20">
+        <div className="mx-auto max-w-5xl px-6">
+          <a
+            href="/experiencia-menu-canario"
+            className="group block overflow-hidden rounded-3xl bg-gradient-to-br from-bark-900 to-bark-800 p-8 ring-1 ring-gold-500/30 transition hover:ring-gold-500/60 sm:p-12"
+          >
+            <div className="flex flex-col items-start gap-6 md:flex-row md:items-center md:justify-between md:gap-10">
+              <div className="flex-1">
+                <p className="mb-3 text-xs uppercase tracking-[0.4em] text-gold-400">
+                  Experiencia gastronómica
+                </p>
+                <h2 className="font-display text-3xl leading-tight text-parchment-50 sm:text-4xl md:text-5xl">
+                  Menú Canario
+                </h2>
+                <p className="mt-4 max-w-xl text-base leading-relaxed text-parchment-100/85 sm:text-lg">
+                  Nueve platos emblemáticos de nuestra cocina, en una sola
+                  mesa. Una cena para descubrir las islas por el paladar.
+                </p>
+              </div>
+              <div className="flex w-full flex-col items-start gap-4 md:w-auto md:items-end">
+                <div className="text-left md:text-right">
+                  <p className="text-xs uppercase tracking-[0.3em] text-parchment-100/60">
+                    Desde
+                  </p>
+                  <p className="font-display text-4xl text-gold-400 sm:text-5xl">
+                    39,50 €
+                  </p>
+                  <p className="text-xs text-parchment-100/60">por persona</p>
+                </div>
+                <span className="rounded-full bg-clay-500 px-6 py-3 text-xs font-semibold uppercase tracking-wider text-parchment-50 transition group-hover:bg-clay-600 sm:text-sm">
+                  Descubrir la experiencia →
+                </span>
+              </div>
+            </div>
+          </a>
         </div>
       </section>
 
@@ -410,10 +457,10 @@ export default function Home() {
                   </a>
                   <br />
                   <a
-                    href="mailto:hola@roquedelconde.es"
+                    href="mailto:grupocayle@gmail.com"
                     className="hover:text-gold-400"
                   >
-                    hola@roquedelconde.es
+                    grupocayle@gmail.com
                   </a>
                 </p>
               </div>

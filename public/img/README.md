@@ -36,6 +36,28 @@ Guarda **cada foto del chat** en esta carpeta (`public/img/`) usando
 | `pescado-mojo.jpg` | Pescado al mojo verde con papas y maíz cocido |
 | `calamares.jpg` | Calamares rellenos con salsa de perejil, papas nuevas y col |
 
+## Experiencia Menú Canario — 10 fotos
+
+Para la página `/experiencia-menu-canario`.
+
+| Nombre del archivo | Qué foto |
+| --- | --- |
+| `cena-grupo-experiencia.jpg` | Foto de un grupo cenando — se usa de fondo en el hero de la página de experiencia |
+| `pimientos-de-padron.webp` | Pimientos de Padrón fritos (puede ser la misma que la galería) |
+| `garbanzos.jpg` | Plato de garbanzas canarias / rancho con costilla y chorizo |
+| `escaldon.jpg` | Cazuela con escaldón de gofio + queso fresco + cebolla morada |
+| `atun-mojo.jpg` | Atún en mojo rojo (lomos o rodajas) |
+| `choco.jpg` | Choco/sepia a la plancha con perejil |
+| `papas-costillas.jpg` | Papas, costillas y piña de millo (mazorca) |
+| `cabra.jpg` | Carne de cabra guisada |
+| `papas-arrugadas.jpg` | Papas arrugadas con sal cristalizada y mojo |
+| `quesillo.jpg` | Quesillo canario (postre tipo flan) |
+
+> Si alguna foto no la tienes aún, puedes dejar la entrada como está en
+> `app/experiencia-menu-canario/page.js` y subir la foto cuando la tengas.
+> Mientras tanto el espacio se verá oscuro (el placeholder del fondo del
+> contenedor de la imagen).
+
 ## Galería — 12 fotos
 
 | Nombre del archivo | Qué foto |
