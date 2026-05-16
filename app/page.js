@@ -198,7 +198,28 @@ export default function Home() {
             Disfruta de las mejores carnes a la brasa de leña, recetas tradicionales canarias y un ambiente acogedor en el corazón de Tenerife.
           </p>
 
-          <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
+          {/* Destacado: experiencia menú canario */}
+          <a
+            href="/experiencia-menu-canario"
+            className="group mt-10 inline-flex w-full max-w-md items-center justify-between gap-3 rounded-full border border-gold-400/50 bg-bark-900/30 px-5 py-3 text-left backdrop-blur transition hover:border-gold-400 hover:bg-bark-900/50 sm:px-6"
+          >
+            <span className="flex flex-col">
+              <span className="text-[10px] font-semibold uppercase tracking-[0.3em] text-gold-400">
+                Nuevo · Experiencia
+              </span>
+              <span className="font-display text-base text-parchment-50 sm:text-lg">
+                Menú Canario · 39,50 €
+              </span>
+            </span>
+            <span
+              aria-hidden="true"
+              className="text-gold-400 transition group-hover:translate-x-1"
+            >
+              →
+            </span>
+          </a>
+
+          <div className="mt-6 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <a
               href="#reservar"
               className="rounded-full bg-clay-500 px-8 py-3 text-sm font-semibold uppercase tracking-wider text-parchment-50 shadow-lg shadow-bark-900/40 transition hover:bg-clay-600"

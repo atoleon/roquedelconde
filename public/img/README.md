@@ -42,16 +42,16 @@ Para la página `/experiencia-menu-canario`.
 
 | Nombre del archivo | Qué foto |
 | --- | --- |
-| `cena-grupo-experiencia.jpg` | Foto de un grupo cenando — se usa de fondo en el hero de la página de experiencia |
+| `cena-grupo-experiencia.jpeg` | Foto de un grupo cenando — se usa de fondo en el hero de la página de experiencia |
 | `pimientos-de-padron.webp` | Pimientos de Padrón fritos (puede ser la misma que la galería) |
-| `garbanzos.jpg` | Plato de garbanzas canarias / rancho con costilla y chorizo |
-| `escaldon.jpg` | Cazuela con escaldón de gofio + queso fresco + cebolla morada |
+| `garbanzas.jpg` | Plato de garbanzas canarias / rancho con costilla y chorizo |
+| `escaldon.jpeg` | Cazuela con escaldón de gofio + queso fresco + cebolla morada |
 | `atun-mojo.jpg` | Atún en mojo rojo (lomos o rodajas) |
 | `choco.jpg` | Choco/sepia a la plancha con perejil |
-| `papas-costillas.jpg` | Papas, costillas y piña de millo (mazorca) |
-| `cabra.jpg` | Carne de cabra guisada |
-| `papas-arrugadas.jpg` | Papas arrugadas con sal cristalizada y mojo |
-| `quesillo.jpg` | Quesillo canario (postre tipo flan) |
+| `papas-costillas.jpeg` | Papas, costillas y piña de millo (mazorca) |
+| `cabra.jpeg` | Carne de cabra guisada |
+| `papas-arrugadas.webp` | Papas arrugadas con sal cristalizada y mojo |
+| `quesillo.webp` | Quesillo canario (postre tipo flan) |
 
 > Si alguna foto no la tienes aún, puedes dejar la entrada como está en
 > `app/experiencia-menu-canario/page.js` y subir la foto cuando la tengas.
