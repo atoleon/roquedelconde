@@ -7,7 +7,7 @@ const RESERVAS_EMAIL = process.env.RESERVAS_EMAIL || "";
 
 export async function enviarReserva(form) {
   const { data, error } = await resend.emails.send({
-    from: "Acme <onboarding@resend.dev>",
+    from: "no-reply@roquedelconde.grupocayle.es",
     to: [`${RESERVAS_EMAIL}`],
     subject: "Nueva Reserva en Roque del Conde",
     html: `
