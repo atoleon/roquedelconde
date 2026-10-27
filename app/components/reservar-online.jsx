@@ -14,6 +14,7 @@ function hoy() {
 
 export default function ReservarOnline({ isOpen, onClose }) {
   const [form, setForm] = useState({
+    name: "",
     personas: "2",
     fecha: hoy(),
     hora: "14:00",
@@ -90,6 +91,22 @@ export default function ReservarOnline({ isOpen, onClose }) {
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="space-y-4">
+              {/* Name */}
+              <div>
+                <label className="block text-sm font-medium text-bark-800 mb-1">
+                  Nombre
+                </label>
+                <input
+                  type="name"
+                  name="name"
+                  value={form.name}
+                  onChange={handleChange}
+                  placeholder="John Doe"
+                  required
+                  className="w-full rounded-lg border border-gray-200 px-3 py-2.5 text-sm text-bark-800 placeholder-gray-400 focus:border-clay-400 focus:outline-none focus:ring-1 focus:ring-clay-400"
+                />
+              </div>
+
               {/* Número de personas */}
               <div>
                 <label className="block text-sm font-medium text-bark-800 mb-1">
