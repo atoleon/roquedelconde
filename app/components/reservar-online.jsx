@@ -8,21 +8,57 @@ for (let h = 13; h <= 22; h++) {
   if (h < 22) HORAS.push(`${String(h).padStart(2, "0")}:30`);
 }
 
-function hoy() {
-  return new Date().toISOString().split("T")[0];
+// Días que el restaurante está cerrado (0 = domingo, 1 = lunes, 2 = martes…)
+const DIAS_CERRADO = [1, 2];
+// Cuántos días hacia delante se puede reservar
+const DIAS_RESERVABLES = 30;
+
+// Convierte una fecha a "AAAA-MM-DD" usando la hora local (no UTC)
+function aISO(fecha) {
+  const y = fecha.getFullYear();
+  const m = String(fecha.getMonth() + 1).padStart(2, "0");
+  const d = String(fecha.getDate()).padStart(2, "0");
+  return `${y}-${m}-${d}`;
+}
+
+// Lista de días abiertos desde hoy, saltando los días de cierre
+function fechasDisponibles() {
+  const fechas = [];
+  const dia = new Date();
+  for (let i = 0; i < DIAS_RESERVABLES; i++) {
+    if (!DIAS_CERRADO.includes(dia.getDay())) {
+      const texto = dia.toLocaleDateString("es-ES", {
+        weekday: "long",
+        day: "numeric",
+        month: "long",
+      });
+      fechas.push({
+        valor: aISO(dia),
+        texto: texto.charAt(0).toUpperCase() + texto.slice(1),
+      });
+    }
+    dia.setDate(dia.getDate() + 1);
+  }
+  return fechas;
+}
+
+function primerDiaDisponible() {
+  return fechasDisponibles()[0].valor;
 }
 
 export default function ReservarOnline({ isOpen, onClose }) {
   const [form, setForm] = useState({
     name: "",
     personas: "2",
-    fecha: hoy(),
+    fecha: primerDiaDisponible(),
     hora: "14:00",
     email: "",
   });
   const [estado, setEstado] = useState("form"); // "form" | "loading" | "exito"
 
   if (!isOpen) return null;
+
+  const fechas = fechasDisponibles();
 
   function handleChange(e) {
     setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
@@ -46,7 +82,13 @@ export default function ReservarOnline({ isOpen, onClose }) {
 
   function handleCerrar() {
     setEstado("form");
-    setForm({ personas: "2", fecha: hoy(), hora: "14:00", email: "" });
+    setForm({
+      name: "",
+      personas: "2",
+      fecha: primerDiaDisponible(),
+      hora: "14:00",
+      email: "",
+    });
     onClose?.();
   }
 
@@ -132,15 +174,19 @@ export default function ReservarOnline({ isOpen, onClose }) {
                 <label className="block text-sm font-medium text-bark-800 mb-1">
                   Fecha
                 </label>
-                <input
-                  type="date"
+                <select
                   name="fecha"
                   value={form.fecha}
-                  min={hoy()}
                   onChange={handleChange}
                   required
                   className="w-full rounded-lg border border-gray-200 px-3 py-2.5 text-sm text-bark-800 focus:border-clay-400 focus:outline-none focus:ring-1 focus:ring-clay-400"
-                />
+                >
+                  {fechas.map((f) => (
+                    <option key={f.valor} value={f.valor}>
+                      {f.texto}
+                    </option>
+                  ))}
+                </select>
               </div>
 
               {/* Hora */}
